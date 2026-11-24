@@ -23,4 +23,3 @@ vérifiables ; les projets complets restent privés.
 - Publier des exemples utiles sans diffuser de secrets, de données privées ou
   de composants propres à un jeu.
 
-**Parcours :** filière technique, puis passage en licence professionnelle.
