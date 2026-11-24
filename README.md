@@ -1,6 +1,8 @@
+<p align="center"><img src="assets/identity.svg" alt="dajiejie1 — 让黑盒开口，让证据说话" width="100%"></p>
+
 <div align="center">
 
-# dajiejie1 // 让黑盒开口
+# 拆解 · 验证 · 复现
 
 **逆向工程 · 游戏安全研究 · 二进制分析 · Linux 系统 · OSINT**
 
