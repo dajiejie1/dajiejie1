@@ -1,25 +1,57 @@
-# dajiejie1
+<div align="center">
 
-**Reverse engineering · systèmes · cybersécurité**
+# dajiejie1 // 让黑盒开口
 
-Je travaille sur l'analyse binaire, les outils de recherche mémoire et les
-environnements Linux pour développer, jouer et expérimenter. L'OSINT fait aussi
-partie de mes domaines d'intérêt. Je publie des composants autonomes et
-vérifiables ; les projets complets restent privés.
+**逆向工程 · 游戏安全研究 · 二进制分析 · Linux 系统 · OSINT**
 
-## Projets publics
+`C++17`　`PE64`　`KVM`　`Steam / Proton`　`Differential Testing`
 
-| Projet | Ce qu'il montre | État |
-| --- | --- | --- |
-| [Pattern Scan Lab](https://github.com/dajiejie1/pattern-scan-lab) | Recherche de motifs C++17, lecture par pages, gestion des trous mémoire, analyse PE64 et tests différentiels sur données synthétiques | Compilé sous MSVC ; 595 vérifications réussies |
-| [Vanta](https://github.com/dajiejie1/vanta) | Prototype de distribution Linux basée sur Bazzite, avec Steam/Proton, KVM et environnement de développement | Sources et workflows prêts ; ISO encore à construire et à valider |
+> 代码会说谎，字节不会。真正危险的是未经验证的假设。
 
-## Méthode
+</div>
 
-- Rendre les limites explicites : une lecture incomplète ne prouve pas l'unicité
-  d'une adresse.
-- Tester sur des données synthétiques avant d'intégrer un composant dans un
-  projet plus vaste.
-- Publier des exemples utiles sans diffuser de secrets, de données privées ou
-  de composants propres à un jeu.
+---
+
+### 我在做什么
+
+我喜欢把复杂系统拆到能解释、能测试、能复现的程度：从内存读取和二进制格式，到 Linux 工作环境和虚拟化实验室。OSINT 也是我持续关注的方向。
+
+这里展示的是经过整理的独立组件。完整项目、私有数据和敏感实现不会直接公开。
+
+### 公开项目
+
+| 项目 | 技术切面 | 当前状态 |
+| :--- | :--- | :--- |
+| **[Pattern Scan Lab](https://github.com/dajiejie1/pattern-scan-lab)** | C++17 模式扫描、通配符、跨页读取、不可读区域处理、PE64 可执行段解析 | **MSVC 编译通过；595 项检查，0 失败** |
+| **[Vanta OS](https://github.com/dajiejie1/vanta)** | 基于 Bazzite 的 Linux 镜像原型；Steam/Proton、KVM、开发工具箱 | **源码已公开；ISO 尚未构建和启动验证** |
+
+### Pattern Scan Lab：把“不确定”写进接口
+
+扫描器可以找到一个候选地址，但如果某些内存页无法读取，就不能宣称它是唯一地址。这个区别直接体现在返回结果里。
+
+```text
+读取完整 + 恰好一个匹配    → 可以确认唯一地址
+存在不可读区域 + 一个匹配  → 只能报告已观察到的候选
+跨越不可读区域的字节       → 绝不拼接成虚假的匹配
+```
+
+项目包含 **500 组差分用例**，把扫描结果与独立参考实现比较。所有测试数据都是合成内存；仓库不包含游戏偏移、专有签名、驱动或真实进程访问。
+
+### Vanta：系统实验，而不是空口承诺
+
+Vanta 是我准备的 Linux 游戏与研究环境原型：Bazzite 桌面、Steam/Proton、AMD-V 或 Intel VT-x 对应的 KVM，以及开发工具箱。当前仓库提供构建配置和工作流；**ISO 还没有完成构建或实机验证**。游戏兼容性仍取决于各游戏及其反作弊支持。
+
+### 我的规则
+
+```text
+01  先确认边界，再相信结果。
+02  能复现的测试，比漂亮的截图更有说服力。
+03  公开方法和证据；保留完整项目的私有部分。
+```
+
+<div align="center">
+
+**BLACK BOX → EVIDENCE → UNDERSTANDING**
+
+</div>
 
