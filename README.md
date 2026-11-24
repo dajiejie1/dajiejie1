@@ -29,6 +29,13 @@
 | **[Pattern Scan Lab](https://github.com/dajiejie1/pattern-scan-lab)** | C++17 模式扫描、通配符、跨页读取、不可读区域处理、PE64 可执行段解析 | **MSVC 编译通过；595 项检查，0 失败** |
 | **[Vanta OS](https://github.com/dajiejie1/vanta)** | 基于 Bazzite 的 Linux 镜像原型；Steam/Proton、KVM、开发工具箱 | **源码已公开；ISO 尚未构建和启动验证** |
 
+### 研究笔记
+
+| 编号 | 标题 | 核心问题 |
+| :--- | :--- | :--- |
+| `FIELD NOTE 001` | [内存里有洞，一个匹配还算唯一吗？](https://dajiejie1.github.io/notes/memory-gaps.html) | 不可读页面怎样改变扫描结果的可信度 |
+| `FIELD NOTE 002` | [Vanta：让游戏与研究共用一台机器](https://dajiejie1.github.io/notes/vanta-design.html) | 游戏、开发与虚拟化怎样共用一条可验证的构建链 |
+
 ### Pattern Scan Lab：把“不确定”写进接口
 
 扫描器可以找到一个候选地址，但如果某些内存页无法读取，就不能宣称它是唯一地址。这个区别直接体现在返回结果里。
