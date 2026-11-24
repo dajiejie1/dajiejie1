@@ -6,6 +6,8 @@
 
 `C++17`　`PE64`　`KVM`　`Steam / Proton`　`Differential Testing`
 
+[个人站点](https://dajiejie1.github.io/) · [Pattern Scan Lab](https://github.com/dajiejie1/pattern-scan-lab) · [Vanta OS](https://github.com/dajiejie1/vanta)
+
 > 代码会说谎，字节不会。真正危险的是未经验证的假设。
 
 </div>
