@@ -27,7 +27,7 @@
 | 项目 | 技术切面 | 当前状态 |
 | :--- | :--- | :--- |
 | **[Pattern Scan Lab](https://github.com/dajiejie1/pattern-scan-lab)** | C++17 模式扫描、通配符、跨页读取、不可读区域处理、PE64 可执行段解析 | **MSVC 编译通过；595 项检查，0 失败** |
-| **[Vanta OS](https://github.com/dajiejie1/vanta)** | 基于 Bazzite 的 Linux 镜像原型；Steam/Proton、KVM、开发工具箱 | **源码已公开；ISO 尚未构建和启动验证** |
+| **[Vanta OS](https://github.com/dajiejie1/vanta)** | 基于 Bazzite 的 Linux 镜像原型；Steam/Proton、KVM、开发工具箱 | **[ISO 技术预览已发布](https://github.com/dajiejie1/vanta/releases/tag/vanta-preview-2026-11-24)；启动与安装尚未验证** |
 
 ### 研究笔记
 
@@ -50,7 +50,7 @@
 
 ### Vanta：系统实验，而不是空口承诺
 
-Vanta 是我准备的 Linux 游戏与研究环境原型：Bazzite 桌面、Steam/Proton、AMD-V 或 Intel VT-x 对应的 KVM，以及开发工具箱。当前仓库提供构建配置和工作流；**ISO 还没有完成构建或实机验证**。游戏兼容性仍取决于各游戏及其反作弊支持。
+Vanta 是我准备的 Linux 游戏与研究环境原型：Bazzite 桌面、Steam/Proton、AMD-V 或 Intel VT-x 对应的 KVM，以及开发工具箱。[ISO 技术预览已发布](https://github.com/dajiejie1/vanta/releases/tag/vanta-preview-2026-11-24)，**但尚未启动或安装验证**。游戏兼容性仍取决于各游戏及其反作弊支持。
 
 ### 我的规则
 
